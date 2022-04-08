@@ -16,6 +16,7 @@ function computerChoice() {
   compChoice = computerOptions[randomNum];
 }
 
+//functions for player choices//
 function throwRock(){
   playerChoice = "rock";
   computerChoice();
@@ -34,6 +35,7 @@ function throwScissor(){
   playGame(playerChoice, compChoice)
 }
 
+//function to see who wins//
 function playGame(player, computer){
 if (player ==="rock" && computer === "scissor") {
   console.log("Player Wins");
@@ -41,11 +43,33 @@ if (player ==="rock" && computer === "scissor") {
 
 //FINISH THIS //
 else if playGame(player, computer){
-  if (player ==="rock" && computer === "scissor") {
+  if (player ==="paper" && computer === "rock") {
     console.log("Player Wins");
 }
 
-else if playerChoice=="scissor" {
-  console.log(Scissor);
+else if playGame(player, computer){
+  if (player ==="scissor" && computer === "paper") {
+    console.log("Player Wins");
 }
+//Ties in the game //
+else if playGame(player, computer){
+  if (player ==="rock" && computer === "rock") {
+    console.log("Tie game!");
+}
+
+else if playGame(player, computer){
+  if (player ==="paper" && computer === "paper") {
+    console.log("Tie game!");
+}
+
+else if playGame(player, computer){
+  if (player ==="scissor" && computer === "scissor") {
+    console.log("Tie game!");
+}
+}
+
+//computer wins//
+else {
+  console.log("Tie game!");
+
 }
