@@ -19,12 +19,12 @@
     <div class="score">
       <div class="playerScore">
         <h2 class="center"> Player </h2>
-        <p class="p-count center"> 0 </p>
+        <p class="p-count center" id="player_Count"> 0 </p>
       </div>
 
       <div class="computerScore">
         <h2 class="center"> Computer </h2>
-        <p class="c-count center"> 0 </p>
+        <p class="c-count center" id="computer_Count"> 0 </p>
       </div>
     </div>
 
@@ -32,9 +32,9 @@
     <div class="move testing"> Choose your move </div>
 
     <div class="options">
-      <button class="Rock" onclick = "throwRock()" > ROCK <img src="https://c.tenor.com/kHcmsxlKHEAAAAAM/rock-one-eyebrow-raised-rock-staring.gif" class="all_pic"> </button>
-      <button class="Paper"> PAPER <img src="https://media3.giphy.com/media/lkdvC4FZHIXyVSaFxh/giphy.gif?cid=6c09b952ebdaae1e293e810975c1b1d83082cdc0d8c72bfe&rid=giphy.gif&ct=s"class="all_pic"> </button>
-      <button class="Scisssors"> SCISSORS <img src="https://c.tenor.com/sRufoAVYT7wAAAAC/cut-scissors.gif"class="all_pic"> </button>
+      <button class="Rock" onclick ="throwRock()"> ROCK <img src="https://c.tenor.com/kHcmsxlKHEAAAAAM/rock-one-eyebrow-raised-rock-staring.gif" class="all_pic"> </button>
+      <button class="Paper"onclick ="throwPaper()"> PAPER <img src="https://media3.giphy.com/media/lkdvC4FZHIXyVSaFxh/giphy.gif?cid=6c09b952ebdaae1e293e810975c1b1d83082cdc0d8c72bfe&rid=giphy.gif&ct=s" class="all_pic"> </button>
+      <button class="Scisssors"onclick ="throwScissor()"> SCISSORS <img src="https://c.tenor.com/sRufoAVYT7wAAAAC/cut-scissors.gif" class="all_pic"> </button>
     </div>
     <!-- Show result of the round-->
     <div class="result"></div>
@@ -51,7 +51,7 @@
 
 
 
-  <script scr="main.js">
+  <script src="main.js">
 
   </script>
 </body>

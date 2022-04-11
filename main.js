@@ -9,67 +9,78 @@ let computerScore = 0;
 // initalizing Global variables to store user and computer selections//
 let compChoice;
 let playerChoice;
+// initialize Global variables for the Scoreboard//
+let playerCount = document.getElementById("player_Count");
+let computerCount = document.getElementById("computer_Count");
 //function to randomly generate a choice for the computer, uses a list to store selctions//
 function computerChoice() {
-  const computerOptions = ["rock," "paper", "scissor"];
+  const computerOptions = ["rock", "paper", "scissor"];
   const randomNum = Math.floor(Math.random() * 3);
   compChoice = computerOptions[randomNum];
 }
 
 //functions for player choices//
-function throwRock(){
+function throwRock() {
   playerChoice = "rock";
   computerChoice();
   playGame(playerChoice, compChoice)
 }
 
-function throwPaper(){
+function throwPaper() {
   playerChoice = "paper";
   computerChoice();
   playGame(playerChoice, compChoice)
 }
 
-function throwScissor(){
+function throwScissor() {
   playerChoice = "scissor";
   computerChoice();
-  playGame(playerChoice, compChoice)
+  playGame(playerChoice, compChoice);
 }
 
 //function to see who wins//
-function playGame(player, computer){
-if (player ==="rock" && computer === "scissor") {
-  console.log("Player Wins");
-}
-
-//FINISH THIS //
-else if playGame(player, computer){
-  if (player ==="paper" && computer === "rock") {
+function playGame(player, computer) {
+  if (player === "rock" && computer === "scissor") {
     console.log("Player Wins");
-}
-
-else if playGame(player, computer){
-  if (player ==="scissor" && computer === "paper") {
+    player_Score();
+    console.log(playerScore);
+  }
+  //FINISH THIS //
+  else if (player === "paper" && computer === "rock") {
     console.log("Player Wins");
-}
-//Ties in the game //
-else if playGame(player, computer){
-  if (player ==="rock" && computer === "rock") {
+    player_Score();
+    console.log(playerScore);
+  } else if (player === "scissor" && computer === "paper") {
+    console.log("Player Wins");
+    player_Score();
+    console.log(playerScore);
+  }
+  //Ties in the game //
+  else if (player === "rock" && computer === "rock") {
     console.log("Tie game!");
-}
-
-else if playGame(player, computer){
-  if (player ==="paper" && computer === "paper") {
+  } else if (player === "paper" && computer === "paper") {
     console.log("Tie game!");
-}
-
-else if playGame(player, computer){
-  if (player ==="scissor" && computer === "scissor") {
+  } else if (player === "scissor" && computer === "scissor") {
     console.log("Tie game!");
-}
+  }
+  //computer wins//
+  else {
+    console.log("Computer Wins!");
+    computer_Score();
+    console.log(computerScore);
+
+  }
 }
 
-//computer wins//
-else {
-  console.log("Tie game!");
 
+
+//scoring//
+function player_Score(){
+  playerScore = playerScore+1;
+  playerCount.textContent = playerScore;
+}
+
+function computer_Score(){
+  computerScore = computerScore+1;
+  computerCount.textContent = computerScore;
 }
