@@ -1,8 +1,8 @@
 // Starting variables //
 // Starting HTML eleemnts as a varible for easy access //
 let pScoreboard = document.querySelector('p-count')
-let cScoreboard = document.querySelector('p-count')
-let roundResult = document.querySelector('p-count')
+let cScoreboard = document.querySelector('c-count')
+let roundResult = document.querySelector('.result')
 //setting score variables for player & computer to track score//
 let playerScore = 0;
 let computerScore = 0;
@@ -95,6 +95,7 @@ function computer_Score(){
 
 //Reset//
 function reset(){
+  jake.innerHTML="";
   computerScore=0;
   playerScore=0;
   computerCount.textContent = computerScore;
